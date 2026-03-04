@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "7J85QWCHHoQ=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dsava\\AppData\\Roaming\\SPB_Data\\you-see-i-see\\YouSeeISee.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dsava\\.nuget\\packages\\godot.sourcegenerators\\4.6.1\\godot.sourcegenerators.4.6.1.nupkg.sha512",
+    "C:\\Users\\dsava\\.nuget\\packages\\godotsharp\\4.6.1\\godotsharp.4.6.1.nupkg.sha512",
+    "C:\\Users\\dsava\\.nuget\\packages\\godotsharpeditor\\4.6.1\\godotsharpeditor.4.6.1.nupkg.sha512"
+  ],
+  "logs": []
+}
