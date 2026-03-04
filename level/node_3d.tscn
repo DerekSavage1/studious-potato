@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://8ugt1newbalj"]
+
+[ext_resource type="Texture2D" uid="uid://cuq6sp0o6413c" path="res://textures/prototype/Orange/texture_02.png" id="1_duxql"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4k1u"]
+albedo_texture = ExtResource("1_duxql")
+uv1_triplanar = true
+
+[node name="Node3D" type="Node3D" unique_id=1732142145]
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="." unique_id=161319422]
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D" unique_id=60554900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7186584, -0.02648151, -1.2908325)
+size = Vector3(6.5039673, 0.23388672, 8.061157)
+material = SubResource("StandardMaterial3D_r4k1u")

@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dnvfenv773xup"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qif3h"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qif3h"]
+
+[node name="Player3D" type="CharacterBody3D" unique_id=579425607]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1527915796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.004399, 0)
+shape = SubResource("CapsuleShape3D_qif3h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1428891489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_qif3h")
+
+[node name="head" type="Node3D" parent="." unique_id=455858767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7486511, 0)
+
+[node name="Camera3D" type="Camera3D" parent="head" unique_id=2119016959]
+fov = 90.0
