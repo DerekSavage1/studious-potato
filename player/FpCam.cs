@@ -6,7 +6,7 @@ public partial class FpCam : Node3D
 {
 
 	public override void _Ready() {
-    	Input.MouseMode = Input.MouseModeEnum.Captured;
+		Input.MouseMode = Input.MouseModeEnum.Captured;
 	}
 	private float @sensitivity = 0.2f;
 
@@ -17,7 +17,7 @@ public partial class FpCam : Node3D
 
 			// PlayerBody (Node3D)         rotate x
  			// 	└── CameraPivot (Node3D)   rotate y
-      		// 		└── Camera3D
+	  		// 		└── Camera3D
 
 			Debug.Print("Hello");
 			
