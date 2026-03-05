@@ -1,9 +1,8 @@
-
-dot editor/cache files
+# Godot editor and import/cache
 .godot/editor/
 .godot/mono/temp/
+.godot/imported/
 .godot/uid_cache.bin
-
 # DLLs and build artifacts
 addons/terrain_3d/bin/
 *.dll
