@@ -1,5 +1,5 @@
-res://player/Player3d.cs
-res://player/FpCam.cs
 res://player/player_3d.tscn
-res://level/node_3d.tscn
 res://player/overlay.gdshader
+res://level/node_3d.tscn
+res://terrain/data.hterrain
+res://terrain/height.res

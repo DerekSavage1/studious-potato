@@ -2,10 +2,23 @@
 
 [ext_resource type="Texture2D" uid="uid://cuq6sp0o6413c" path="res://textures/prototype/Orange/texture_02.png" id="1_duxql"]
 [ext_resource type="PackedScene" uid="uid://dnvfenv773xup" path="res://player/player_3d.tscn" id="2_r4k1u"]
+[ext_resource type="Script" uid="uid://drm3673hh70ds" path="res://addons/zylann.hterrain/hterrain.gd" id="3_jghmw"]
+[ext_resource type="Resource" uid="uid://djt35jjyc21ll" path="res://terrain/data.hterrain" id="4_jxtbs"]
+[ext_resource type="Script" uid="uid://c5lfwmvubgxqv" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="5_ubw4q"]
+[ext_resource type="Texture2D" uid="uid://bst5vovj18klx" path="res://textures/Grass/tileable-s7002876-grey.png" id="6_jxtbs"]
+[ext_resource type="Texture2D" uid="uid://b4t47mjuaw20c" path="res://textures/rocks/rock_ground_diff_1k.jpg" id="6_p3wqg"]
+[ext_resource type="Texture2D" uid="uid://gikja4t6w0gq" path="res://textures/rocks/rock_ground_nor_gl_1k.jpg" id="7_286ww"]
+[ext_resource type="Texture2D" uid="uid://v76j8q2oj48c" path="res://textures/mud_leaves/brown_mud_leaves_01_diff_1k.jpg" id="7_vobiv"]
+[ext_resource type="Texture2D" uid="uid://dvfpj2r4p8i2q" path="res://textures/mud_leaves/brown_mud_leaves_01_nor_gl_1k.jpg" id="9_igwun"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r4k1u"]
 albedo_texture = ExtResource("1_duxql")
 uv1_triplanar = true
+
+[sub_resource type="Resource" id="Resource_p3wqg"]
+script = ExtResource("5_ubw4q")
+mode = 0
+textures = [[ExtResource("6_jxtbs"), ExtResource("6_p3wqg"), ExtResource("7_vobiv")], [null, ExtResource("7_286ww"), ExtResource("9_igwun")]]
 
 [node name="Node3D" type="Node3D" unique_id=1732142145]
 
@@ -17,8 +30,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.7186584, -0.02648151, -1.2
 size = Vector3(6.5039673, 0.23388672, 8.061157)
 material = SubResource("StandardMaterial3D_r4k1u")
 
-[node name="Player3D" parent="." unique_id=579425607 instance=ExtResource("2_r4k1u")]
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=316335306]
 transform = Transform3D(1, 0, 0, 0, 1.1924881e-08, 1, 0, -1, 1.1924881e-08, 0, 3.6926477, 0)
 shadow_enabled = true
+
+[node name="HTerrain" type="Node3D" parent="." unique_id=1611805663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -23, 0)
+script = ExtResource("3_jghmw")
+_terrain_data = ExtResource("4_jxtbs")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_p3wqg")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = true
+shader_params/u_tile_reduction = Vector4(2.28, 2.07, 1.595, -0.11)
+metadata/_custom_type_script = "uid://drm3673hh70ds"
+
+[node name="Player3D" parent="." unique_id=579425607 instance=ExtResource("2_r4k1u")]
