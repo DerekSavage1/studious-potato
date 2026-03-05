@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dnvfenv773xup"]
+
+[ext_resource type="Script" uid="uid://dfkeplqhw67ka" path="res://player/Player3d.cs" id="1_a5lo2"]
+[ext_resource type="Script" uid="uid://vk7kmqpe07q8" path="res://player/FpCam.cs" id="1_nni6y"]
+[ext_resource type="Shader" uid="uid://c0qd0vnsh6hkw" path="res://player/overlay.gdshader" id="3_6g8ua"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qif3h"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qif3h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nrofp"]
+render_priority = 0
+shader = ExtResource("3_6g8ua")
+shader_parameter/pixel_size = 9.0
+shader_parameter/levels = 40.0
+shader_parameter/gamma = Vector2(0.27, 2.8)
+
+[sub_resource type="QuadMesh" id="QuadMesh_wxf5c"]
+material = SubResource("ShaderMaterial_nrofp")
+flip_faces = true
+size = Vector2(2, 2)
+
+[node name="Player3D" type="CharacterBody3D" unique_id=579425607]
+script = ExtResource("1_a5lo2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1527915796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.004399, 0)
+shape = SubResource("CapsuleShape3D_qif3h")
+debug_color = Color(0.991777, 0, 0.26719525, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1428891489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CapsuleMesh_qif3h")
+
+[node name="head" type="Node3D" parent="." unique_id=455858767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7486511, 0)
+script = ExtResource("1_nni6y")
+
+[node name="Camera3D" type="Camera3D" parent="head" unique_id=2119016959]
+fov = 90.0
+
+[node name="Shader" type="MeshInstance3D" parent="head/Camera3D" unique_id=1047298561]
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_wxf5c")
