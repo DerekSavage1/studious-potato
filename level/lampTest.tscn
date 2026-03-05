@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://ceftenjv51a3j"]
+
+[ext_resource type="Texture2D" uid="uid://cuc2gqn87fy5v" path="res://textures/Metals/rusty_metal_sheet_diff_1k.jpg" id="1_gbm7h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cju5k"]
+albedo_texture = ExtResource("1_gbm7h")
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.050766036
+uv1_world_triplanar = true
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_qqmkk"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_hipd4"]
+height = 24.294373
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ph2po"]
+height = 11.836
+radius = 0.15
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_gbm7h"]
+radius = 0.1
+height = 10.1
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3hwvs"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_wqlnf"]
+height = 1.2817383
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gbm7h"]
+radius = 0.3
+height = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ph2po"]
+albedo_color = Color(0.99215686, 0.7647059, 0, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_cju5k"]
+radius = 0.3
+height = 1.0
+
+[node name="Lamp" type="Node3D" unique_id=1380939256]
+
+[node name="PoleArm" type="StaticBody3D" parent="." unique_id=1384330579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.010458469, 11.449857, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PoleArm" unique_id=985634871]
+transform = Transform3D(0.2, 0, 0, 0, -0.024758708, -0.19707985, 0, 2.4248152, -0.0020122945, -0.018770099, -1.835844, 2.3515775)
+material_override = SubResource("StandardMaterial3D_cju5k")
+mesh = SubResource("CylinderMesh_qqmkk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PoleArm" unique_id=1142973600]
+transform = Transform3D(0.2, 0, 0, 0, -0.0022863217, -0.19998693, 0, 0.19998693, -0.0022863217, 0, -1.802741, 2.361949)
+shape = SubResource("CylinderShape3D_hipd4")
+
+[node name="PoleUp" type="StaticBody3D" parent="." unique_id=1993220317]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PoleUp" unique_id=478532429]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.8006353, 0)
+shape = SubResource("CylinderShape3D_ph2po")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PoleUp" unique_id=1693651800]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, -0.010707855, 4.745424, 0)
+material_override = SubResource("StandardMaterial3D_cju5k")
+mesh = SubResource("CapsuleMesh_gbm7h")
+
+[node name="Poleback" type="StaticBody3D" parent="." unique_id=882410392]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Poleback" unique_id=1468609695]
+transform = Transform3D(1, 0, 0, 0, -0.00797481, -0.20118581, 0, 0.5988128, -0.0026793322, 0.0012257099, 9.529933, 4.7637186)
+material_override = SubResource("StandardMaterial3D_cju5k")
+mesh = SubResource("CapsuleMesh_3hwvs")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Poleback" unique_id=1428810959]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 9.499307, 4.7669735)
+shape = SubResource("CapsuleShape3D_wqlnf")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." unique_id=1825933087]
+transform = Transform3D(1, 0, 0, 0, -0.0017104578, 0.99999857, 0, -0.99999857, -0.0017104578, 0, 9.490379, 4.8271303)
+light_color = Color(1, 0.81960785, 0.02745098, 1)
+light_energy = 14.535
+shadow_enabled = true
+spot_range = 15.874
+spot_attenuation = 0.94
+spot_angle = 49.5
+spot_angle_attenuation = 0.35355416
+
+[node name="Bulb" type="StaticBody3D" parent="." unique_id=1543812285]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Bulb" unique_id=1853562163]
+transform = Transform3D(1, 0, 0, 0, 0.046182487, -0.998933, 0, 0.998933, 0.046182487, 0, 9.479246, 4.7826624)
+shape = SubResource("CapsuleShape3D_gbm7h")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Bulb" unique_id=1735889423]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -0.48426792, 0, 1, -2.1168022e-08, 0, 9.450657, 4.7806606)
+material_override = SubResource("StandardMaterial3D_ph2po")
+mesh = SubResource("CapsuleMesh_cju5k")
