@@ -1,6 +1,7 @@
-HTerrain
-MeshInstance3D
 DirectionalLight3D
+Terrain3D
+ProtonScatter
+MeshInstance3D
 Camera3D
 Node3D
 CSGBox3D
