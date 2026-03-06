@@ -1,8 +1,9 @@
 [gd_resource type="StandardMaterial3D" format=3 uid="uid://d3bdsq0kvg7vr"]
 
-[ext_resource type="Texture2D" uid="uid://fw6kd51kh0qj" path="res://textures/paper/Texturelabs_Paper_144S.jpg" id="1_b7ph1"]
+[ext_resource type="Texture2D" path="res://textures/paper/Texturelabs_Paper_144S.jpg" id="1_b7ph1"]
 
 [resource]
 albedo_texture = ExtResource("1_b7ph1")
 metallic_specular = 0.0
+emission_energy_multiplier = 19.6
 texture_filter = 2
