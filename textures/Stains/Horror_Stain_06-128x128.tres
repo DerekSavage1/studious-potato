@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bjueu6u3jk6uo"]
+
+[ext_resource type="Texture2D" uid="uid://bi2fnotcs4bwk" path="res://textures/Stains/Horror_Stain_06-128x128.png" id="1_2pxpj"]
+
+[resource]
+transparency = 1
+shading_mode = 0
+albedo_texture = ExtResource("1_2pxpj")
+refraction_enabled = true
+texture_filter = 2
