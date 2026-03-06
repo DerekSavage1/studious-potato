@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://c338tjcjoe8qv"
+path="res://.godot/imported/Bedroom.4.map-8cc407d1648b7d00f8ef36a8fdd5b24f.tres"
+
+[deps]
+
+source_file="res://maps/autosave/Bedroom.4.map"
+dest_files=["res://.godot/imported/Bedroom.4.map-8cc407d1648b7d00f8ef36a8fdd5b24f.tres"]
+
+[params]
+

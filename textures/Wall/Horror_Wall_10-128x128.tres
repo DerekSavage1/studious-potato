@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://f00yevyoc8sm"]
+
+[ext_resource type="Texture2D" uid="uid://pipdsm18l7da" path="res://textures/Wall/Horror_Wall_10-128x128.png" id="1_ltx48"]
+
+[resource]
+albedo_texture = ExtResource("1_ltx48")
+metallic_specular = 0.0
+texture_filter = 2
