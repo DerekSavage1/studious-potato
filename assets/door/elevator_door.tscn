@@ -1,0 +1,153 @@
+[gd_scene format=4 uid="uid://4xoq5m8soe74"]
+
+[ext_resource type="Script" uid="uid://retmai16kl0d" path="res://assets/door/ElevatorDoor.cs" id="1_ggus7"]
+[ext_resource type="Script" uid="uid://cwu5cf7a0awcd" path="res://addons/func_godot/src/map/func_godot_map.gd" id="1_lkkyv"]
+[ext_resource type="Resource" uid="uid://bkhxcqsquw1yg" path="res://addons/func_godot/func_godot_default_map_settings.tres" id="2_blitr"]
+[ext_resource type="Material" uid="uid://cphckjgeta6lk" path="res://textures/pdtextures/461223198.tres" id="3_ggus7"]
+[ext_resource type="Script" path="res://assets/door/ElevatorAnmiation.cs" id="4_yxpt6"]
+
+[sub_resource type="Animation" id="Animation_lkkyv"]
+resource_name = "Close"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DoorLeft:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(0.5176329, 1),
+"update": 0,
+"values": [Vector3(0.15, 0, 1), Vector3(0.15, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DoorRight:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(0.5176329, 1),
+"update": 0,
+"values": [Vector3(0, 0, -1), Vector3(0, 0, 0.05)]
+}
+
+[sub_resource type="Animation" id="Animation_yxpt6"]
+resource_name = "Open"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DoorRight:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.56666666, 0.9666667, 1.25, 3),
+"transitions": PackedFloat32Array(2.46, 1, 1.866065, 1.866065, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0.05), Vector3(0, 0, -0.038), Vector3(0, 0, -0.025), Vector3(0, 0, -0.025), Vector3(0, 0, -1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DoorLeft:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.56666666, 0.9666667, 1.25, 3),
+"transitions": PackedFloat32Array(2.46, 1, 1.866065, 1.866065, 1),
+"update": 0,
+"values": [Vector3(0.15, 0, 0), Vector3(0.15, 0, 0.038), Vector3(0.15, 0, 0.025), Vector3(0.15, 0, 0.025), Vector3(0.15, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_arh5w"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DoorRight:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DoorLeft:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.15, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_he06x"]
+_data = {
+&"Close": SubResource("Animation_lkkyv"),
+&"Open": SubResource("Animation_yxpt6"),
+&"RESET": SubResource("Animation_arh5w")
+}
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_pfgwh"]
+_surfaces = [{
+"aabb": AABB(0.03125, 0.25, -1.8125, 0.25, 6, 1.75),
+"attribute_data": PackedByteArray("VFVVvm8Sg74gaUq+bxKDviFpSr4AAAAAVVVVvj7DrrDJdr69AAAAAIQW2bx1TPAxdxbZvG8Sg77Gdr69bxKDvpE0Jb0Urke+kTQlveHBPL59W9Y84cE8vn1b1jwUrke+kTQlPRSuR759W9a8FK5Hvn1b1rzhwTy+kTQlPeHBPL7Jdr49bxKDvoQW2TxvEoO+hBbZPAAAAADJdr49AAAAAFVVVT4AAAAAIWlKPgAAAAAhaUo+bxKDvlVVVT5vEoO+"),
+"format": 34359742487,
+"index_count": 36,
+"index_data": PackedByteArray("AAABAAIAAAACAAMABAAFAAYABAAGAAcACAAJAAoACAAKAAsADAANAA4ADAAOAA8AEAARABIAEAASABMAFAAVABYAFAAWABcA"),
+"material": ExtResource("3_ggus7"),
+"name": "pdtextures/461223198",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 24,
+"vertex_data": PackedByteArray("AACQPgAAyEAAAOi/AAAAPQAAyEAAAOi/AAAAPQAAgD4AAOi/AACQPgAAgD4AAOi/AAAAPQAAgD4AAIC9AAAAPQAAgD4AAOi/AAAAPQAAyEAAAOi/AAAAPQAAyEAAAIC9AAAAPQAAgD4AAIC9AACQPgAAgD4AAIC9AACQPgAAgD4AAOi/AAAAPQAAgD4AAOi/AAAAPQAAyEAAAIC9AAAAPQAAyEAAAOi/AACQPgAAyEAAAOi/AACQPgAAyEAAAIC9AACQPgAAyEAAAIC9AACQPgAAyEAAAOi/AACQPgAAgD4AAOi/AACQPgAAgD4AAIC9AACQPgAAgD4AAIC9AAAAPQAAgD4AAIC9AAAAPQAAyEAAAIC9AACQPgAAyEAAAIC9/////1b5qrz/////VvmqvP////9W+aq8/////1b5qrwAAP9//39UQwAA/3//f1RDAAD/f/9/VEMAAP9//39UQ/9/AABWef+//38AAFZ5/7//fwAAVnn/v/9/AABWef+//3////9//7//f////3//v/9/////f/+//3////9//7////9//3//P////3//f/8/////f/9//z////9//3//P/9//3////+//3//f////7//f/9/////v/9//3////+/")
+}]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_46888"]
+points = PackedVector3Array(0.2734375, 6.25, -0.06688596, 0.2734375, 0.25, -0.06688596, 0.0234375, 6.25, -0.06688596, 0.0234375, 0.25, -0.06688596, 0.2734375, 6.25, -1.816886, 0.2734375, 0.25, -1.816886, 0.0234375, 6.25, -1.816886, 0.0234375, 0.25, -1.816886)
+
+[node name="ElevatorDoor" type="Node3D" unique_id=1357797837 node_paths=PackedStringArray("animationPlayer")]
+script = ExtResource("1_ggus7")
+animationPlayer = NodePath("AnimationPlayer")
+
+[node name="FuncGodotMap" type="Node3D" parent="." unique_id=1541538132]
+script = ExtResource("1_lkkyv")
+local_map_file = "uid://c4sgwfd52e5tq"
+map_settings = ExtResource("2_blitr")
+metadata/_custom_type_script = "uid://cwu5cf7a0awcd"
+
+[node name="AnimatableBody3D" type="AnimatableBody3D" parent="." unique_id=931924442]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1482811978]
+libraries/ = SubResource("AnimationLibrary_he06x")
+script = ExtResource("4_yxpt6")
+
+[node name="DoorRight" type="StaticBody3D" parent="." unique_id=1572325103]
+
+[node name="entity_0_mesh_instance" type="MeshInstance3D" parent="DoorRight" unique_id=353758447]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("ArrayMesh_pfgwh")
+
+[node name="entity_0_brush_0_collision_shape" type="CollisionShape3D" parent="DoorRight" unique_id=1069685851]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_46888")
+
+[node name="DoorLeft" type="StaticBody3D" parent="." unique_id=1115604288]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0.15, 0, 0)
+
+[node name="entity_0_mesh_instance" type="MeshInstance3D" parent="DoorLeft" unique_id=199450764]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+mesh = SubResource("ArrayMesh_pfgwh")
+
+[node name="entity_0_brush_0_collision_shape" type="CollisionShape3D" parent="DoorLeft" unique_id=1096900786]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_46888")

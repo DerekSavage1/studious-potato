@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://qw0abpol0ybe"]
+
+[ext_resource type="Texture2D" uid="uid://bn627fvk6iq5h" path="res://textures/wood/oak-veneered-mdf-2165-in-architextures.jpg" id="1_2ko23"]
+
+[resource]
+albedo_texture = ExtResource("1_2ko23")
+metallic_specular = 0.0
+texture_filter = 2

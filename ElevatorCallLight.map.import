@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://bw2wx68myx3a6"
+path="res://.godot/imported/ElevatorCallLight.map-83482814b05446844c5c224a5afb29b8.tres"
+
+[deps]
+
+source_file="res://ElevatorCallLight.map"
+dest_files=["res://.godot/imported/ElevatorCallLight.map-83482814b05446844c5c224a5afb29b8.tres"]
+
+[params]
+

@@ -1,0 +1,24 @@
+newmtl Wall/Horror_Wall_10-128x128
+map_Kd textures/Wall/Horror_Wall_10-128x128.png
+
+newmtl earth-tone-barcode-carpet-6287-in-architextures
+map_Kd textures/earth-tone-barcode-carpet-6287-in-architextures.jpg
+
+newmtl pdtextures/461223133
+map_Kd textures/pdtextures/461223133.jpg
+
+newmtl pdtextures/461223134
+map_Kd textures/pdtextures/461223134.jpg
+
+newmtl pdtextures/461223198
+map_Kd textures/pdtextures/461223198.jpg
+
+newmtl prototype/Dark/texture_01
+map_Kd textures/prototype/Dark/texture_01.png
+
+newmtl prototype/Light/texture_02
+map_Kd textures/prototype/Light/texture_02.png
+
+newmtl wood/oak-veneered-mdf-2165-in-architextures
+map_Kd textures/wood/oak-veneered-mdf-2165-in-architextures.jpg
+

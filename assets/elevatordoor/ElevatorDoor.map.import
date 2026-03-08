@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://c4sgwfd52e5tq"
+path="res://.godot/imported/ElevatorDoor.map-eba3f34cb67db50f339bd3a120a68f2e.tres"
+
+[deps]
+
+source_file="res://assets/elevatordoor/ElevatorDoor.map"
+dest_files=["res://.godot/imported/ElevatorDoor.map-eba3f34cb67db50f339bd3a120a68f2e.tres"]
+
+[params]
+
