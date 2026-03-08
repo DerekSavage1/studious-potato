@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dnvfenv773xup"]
 
-[ext_resource type="Script" uid="uid://dfkeplqhw67ka" path="res://player/Player3d.cs" id="1_a5lo2"]
-[ext_resource type="Script" uid="uid://vk7kmqpe07q8" path="res://player/FpCam.cs" id="1_nni6y"]
+[ext_resource type="Script" uid="uid://bwpnlrp05q0te" path="res://src/player.cs" id="1_nrofp"]
+[ext_resource type="Script" uid="uid://b7y3ur6lp3grj" path="res://src/FpCam.cs" id="2_nrofp"]
 [ext_resource type="Shader" uid="uid://c0qd0vnsh6hkw" path="res://player/overlay.gdshader" id="3_6g8ua"]
-[ext_resource type="Script" uid="uid://dy7ysqpea52rr" path="res://player/PlayerRayCast.cs" id="4_nrofp"]
+[ext_resource type="Script" uid="uid://r2c1gxq0sygq" path="res://src/PlayerRayCast.cs" id="4_wxf5c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qif3h"]
 
@@ -12,10 +12,6 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nrofp"]
 render_priority = 0
 shader = ExtResource("3_6g8ua")
-shader_parameter/disabled = true
-shader_parameter/pixel_size = 9.0
-shader_parameter/levels = 40.0
-shader_parameter/gamma = Vector2(0.385, 2.8)
 
 [sub_resource type="QuadMesh" id="QuadMesh_wxf5c"]
 material = SubResource("ShaderMaterial_nrofp")
@@ -23,9 +19,9 @@ flip_faces = true
 size = Vector2(2, 2)
 
 [node name="Player3D" type="CharacterBody3D" unique_id=579425607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38914394, 0.832649, 0.62789774)
 collision_layer = 2
-collision_mask = 3
-script = ExtResource("1_a5lo2")
+script = ExtResource("1_nrofp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1527915796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.004399, 0)
@@ -38,7 +34,7 @@ mesh = SubResource("CapsuleMesh_qif3h")
 
 [node name="head" type="Node3D" parent="." unique_id=455858767]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7486511, 0)
-script = ExtResource("1_nni6y")
+script = ExtResource("2_nrofp")
 
 [node name="Camera3D" type="Camera3D" parent="head" unique_id=2119016959]
 fov = 90.0
@@ -50,4 +46,4 @@ mesh = SubResource("QuadMesh_wxf5c")
 [node name="PlayerRayCast" type="RayCast3D" parent="head" unique_id=1650173282]
 target_position = Vector3(0, 0, -2)
 debug_shape_thickness = 1
-script = ExtResource("4_nrofp")
+script = ExtResource("4_wxf5c")
