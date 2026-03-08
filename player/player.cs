@@ -1,6 +1,11 @@
 using Godot;
 using System;
 
+/*
+   C#: 	Classes, export variables and methods use PascalCase, 
+		private fields use _camelCase,
+		local variables and parameters use camelCase (See C# style guide).
+*/
 public partial class player : CharacterBody3D
 {
 	public const float Speed = 5.0f;

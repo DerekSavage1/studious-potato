@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://7jqi5i84ri5r"]
+
+[ext_resource type="Texture2D" uid="uid://d2shh6g544u7w" path="res://textures/pdtextures/461223117.jpg" id="1_50kou"]
+
+[resource]
+albedo_texture = ExtResource("1_50kou")
+metallic_specular = 0.0
+emission = Color(0.871543, 0.7943862, 0.6097179, 1)
+emission_energy_multiplier = 1.4
+texture_filter = 2
