@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://jvuwhexg075n"
+path="res://.godot/imported/elevatorButton.map-20c9de35ce25c6dbe84bb5582b465fc1.tres"
+
+[deps]
+
+source_file="res://trenchbroom/models/elevatordoor/elevatorButton.map"
+dest_files=["res://.godot/imported/elevatorButton.map-20c9de35ce25c6dbe84bb5582b465fc1.tres"]
+
+[params]
+

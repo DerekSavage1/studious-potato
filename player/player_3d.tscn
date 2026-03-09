@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://dnvfenv773xup"]
 
-[ext_resource type="Script" uid="uid://bwpnlrp05q0te" path="res://src/player.cs" id="1_nrofp"]
-[ext_resource type="Script" uid="uid://b7y3ur6lp3grj" path="res://src/FpCam.cs" id="2_nrofp"]
+[ext_resource type="Script" uid="uid://c3i7mbnl1ps3a" path="res://src/player.cs" id="1_nrofp"]
+[ext_resource type="Script" uid="uid://britpol26rr6q" path="res://src/FpCam.cs" id="2_nrofp"]
 [ext_resource type="Shader" uid="uid://c0qd0vnsh6hkw" path="res://player/overlay.gdshader" id="3_6g8ua"]
-[ext_resource type="Script" uid="uid://r2c1gxq0sygq" path="res://src/PlayerRayCast.cs" id="4_wxf5c"]
+[ext_resource type="Script" uid="uid://cttkn1w2e5tw6" path="res://src/PlayerRayCast.cs" id="4_wxf5c"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qif3h"]
 
@@ -12,6 +12,9 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nrofp"]
 render_priority = 0
 shader = ExtResource("3_6g8ua")
+shader_parameter/pixel_size = 7.0
+shader_parameter/levels = 72.0
+shader_parameter/gamma = Vector2(0.225, 4.88)
 
 [sub_resource type="QuadMesh" id="QuadMesh_wxf5c"]
 material = SubResource("ShaderMaterial_nrofp")

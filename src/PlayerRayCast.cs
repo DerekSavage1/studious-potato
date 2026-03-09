@@ -8,10 +8,12 @@ public partial class PlayerRayCast : RayCast3D
         {
             var collider = GetCollider();
 
-            if (collider is Interactable interactable)
+            if (collider is Interactive interactable)
             {
+                GD.Print("SeeButton");
                 if (Input.IsActionJustPressed("interact"))
                 {
+                    GD.Print("PressButton");
                     interactable.Interact();
                 }
             }
