@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6r366rv6l8yq"
-path.s3tc="res://.godot/imported/461223173.jpg-ce538f0f0e7fbf1a024d46689fcc6714.s3tc.ctex"
+uid="uid://b0tlg5geeixme"
+path.s3tc="res://.godot/imported/zinc-5898-in-architextures.jpg-39f6c247c17580da3472610f58d91b7e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://trenchbroom/textures/pdtextures/461223173.jpg"
-dest_files=["res://.godot/imported/461223173.jpg-ce538f0f0e7fbf1a024d46689fcc6714.s3tc.ctex"]
+source_file="res://trenchbroom/textures/Assorted/zinc-5898-in-architextures.jpg"
+dest_files=["res://.godot/imported/zinc-5898-in-architextures.jpg-39f6c247c17580da3472610f58d91b7e.s3tc.ctex"]
 
 [params]
 

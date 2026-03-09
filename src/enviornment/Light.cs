@@ -4,11 +4,13 @@ using Godot;
 using Godot.Collections;
 
 [Tool]
-public partial class Illuminatable : MeshInstance3D, Reactive
+public partial class Light : Node3D, Reactive
 {
 	[Export]
 	public Color color {get; set;}
     StandardMaterial3D material;
+
+    MeshInstance3D mesh;
 
     private bool isOn = false;
 
@@ -24,8 +26,11 @@ public partial class Illuminatable : MeshInstance3D, Reactive
     public override void _Ready()
     {
 
+        mesh = GetChild<MeshInstance3D>(0);
+
         material = new StandardMaterial3D
         {
+            AlbedoColor = color,
             EmissionEnabled = true,
             Emission = color,                 // this is the important part
             EmissionEnergyMultiplier = 10.0f,  // increase brightness
@@ -43,10 +48,10 @@ public partial class Illuminatable : MeshInstance3D, Reactive
     {
         if(isOn)
         {
-            MaterialOverride = null;
+            mesh.MaterialOverride = null;
         } else
         {
-            MaterialOverride = material;
+            mesh.MaterialOverride = material;
         }
 
         isOn = !isOn;

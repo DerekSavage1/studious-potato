@@ -11,17 +11,17 @@ public partial class Button : StaticBody3D, Interactive
 
     public void _func_godot_apply_properties(Dictionary entity_properties)
     {
-        // if (!entity_properties.ContainsKey("target"))
-        //     return;
+        if (Targets != null && Targets.Count > 0)
+            return; // already set, don't overwrite
 
-        // string targetName = (string)entity_properties["target"];
+        if (!entity_properties.ContainsKey("target"))
+            return;
 
-        // Targets = new Array<Node>();
+        string targetName = (string)entity_properties["target"];
+        Targets = new Array<Node>();
 
-        // foreach (Node node in GetTree().GetNodesInGroup(targetName))
-        // {
-        //     Targets.Add(node);
-        // }
+        foreach (Node node in GetTree().GetNodesInGroup(targetName))
+            Targets.Add(node);
     }
 
     public void Interact()

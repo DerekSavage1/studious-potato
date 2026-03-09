@@ -7,5 +7,6 @@
 script = ExtResource("1_ig521")
 script_class = ExtResource("2_fkbo7")
 classname = "interactable_button"
+meta_properties = Dictionary[String, Variant]({})
 node_class = "StaticBody3D"
 metadata/_custom_type_script = "uid://5cow84q03m6a"

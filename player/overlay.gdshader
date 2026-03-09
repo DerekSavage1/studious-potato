@@ -1,13 +1,13 @@
 shader_type spatial;
-render_mode unshaded, fog_disabled;
+render_mode unshaded, fog_disabled, depth_draw_never, cull_disabled;
 uniform float pixel_size : hint_range(0.0, 20.0, 1.0);
 uniform float levels : hint_range(0.0, 100.0, 1.0);
 uniform vec2 gamma;
 
 uniform sampler2D screen_texture : hint_screen_texture;
 
-void vertex() {-
-	POSITION = vec4(VERTEX.xy, 1.0, 1.0);
+void vertex() {
+    POSITION = vec4(VERTEX.xy, 1.0, 1.0);
 }
 
 void fragment() {

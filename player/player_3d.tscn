@@ -13,8 +13,8 @@
 render_priority = 0
 shader = ExtResource("3_6g8ua")
 shader_parameter/pixel_size = 7.0
-shader_parameter/levels = 72.0
-shader_parameter/gamma = Vector2(0.225, 4.88)
+shader_parameter/levels = 60.0
+shader_parameter/gamma = Vector2(0.225, 6.035)
 
 [sub_resource type="QuadMesh" id="QuadMesh_wxf5c"]
 material = SubResource("ShaderMaterial_nrofp")

@@ -9,4 +9,5 @@
 
 [resource]
 script = ExtResource("6_lhd7s")
+textures_root_folder = "trenchbroom/textures"
 metadata/_custom_type_script = "uid://cx44c4vnq8bt5"
