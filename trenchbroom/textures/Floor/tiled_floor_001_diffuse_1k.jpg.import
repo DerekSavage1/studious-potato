@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckg08xlucxotw"
-path.s3tc="res://.godot/imported/Horror_Wall_01-128x128.png-865afab6a2eef11070df068df3a1b6e8.s3tc.ctex"
+uid="uid://b03lnlpp5dubk"
+path.s3tc="res://.godot/imported/tiled_floor_001_diffuse_1k.jpg-f53e7b6d236674f763f5bf268a4f5166.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://trenchbroom/textures/Wall/Horror_Wall_01-128x128.png"
-dest_files=["res://.godot/imported/Horror_Wall_01-128x128.png-865afab6a2eef11070df068df3a1b6e8.s3tc.ctex"]
+source_file="res://trenchbroom/textures/Floor/tiled_floor_001_diffuse_1k.jpg"
+dest_files=["res://.godot/imported/tiled_floor_001_diffuse_1k.jpg-f53e7b6d236674f763f5bf268a4f5166.s3tc.ctex"]
 
 [params]
 

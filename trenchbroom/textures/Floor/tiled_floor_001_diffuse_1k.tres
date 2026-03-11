@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cp2vtc3k3rfsd"]
+
+[ext_resource type="Texture2D" uid="uid://b03lnlpp5dubk" path="res://trenchbroom/textures/Floor/tiled_floor_001_diffuse_1k.jpg" id="1_vmiun"]
+
+[resource]
+albedo_texture = ExtResource("1_vmiun")
+metallic_specular = 0.0
+texture_filter = 2

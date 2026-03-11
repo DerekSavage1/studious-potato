@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckg08xlucxotw"
-path.s3tc="res://.godot/imported/Horror_Wall_01-128x128.png-865afab6a2eef11070df068df3a1b6e8.s3tc.ctex"
+uid="uid://45rq0ehuq6hi"
+path.s3tc="res://.godot/imported/velour_velvet_diff_1k.jpg-49bebc444cad7ddb9ee74c81842488f8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://trenchbroom/textures/Wall/Horror_Wall_01-128x128.png"
-dest_files=["res://.godot/imported/Horror_Wall_01-128x128.png-865afab6a2eef11070df068df3a1b6e8.s3tc.ctex"]
+source_file="res://trenchbroom/textures/Fabric/velour_velvet_diff_1k.jpg"
+dest_files=["res://.godot/imported/velour_velvet_diff_1k.jpg-49bebc444cad7ddb9ee74c81842488f8.s3tc.ctex"]
 
 [params]
 
