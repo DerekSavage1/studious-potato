@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://u8rnneebvw3u"
-path.s3tc="res://.godot/imported/wood_table_diff_1k.jpg-c4276a7ab14524a4ab74df9c4ffa9f32.s3tc.ctex"
+path.s3tc="res://.godot/imported/wood_table_diff_1k.jpg-e7649d78de3f6c5f1cb33b791ddff842.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://textures/wood/wood_table_diff_1k.jpg"
-dest_files=["res://.godot/imported/wood_table_diff_1k.jpg-c4276a7ab14524a4ab74df9c4ffa9f32.s3tc.ctex"]
+source_file="res://trenchbroom/textures/wood/wood_table_diff_1k.jpg"
+dest_files=["res://.godot/imported/wood_table_diff_1k.jpg-e7649d78de3f6c5f1cb33b791ddff842.s3tc.ctex"]
 
 [params]
 

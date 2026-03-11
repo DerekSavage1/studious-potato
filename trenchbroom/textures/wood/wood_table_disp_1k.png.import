@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4wfp5tcl5itc"
-path="res://.godot/imported/wood_table_disp_1k.png-9cc05359084663adea7264f29a1bc23f.ctex"
+path="res://.godot/imported/wood_table_disp_1k.png-68025f83b0a1d4e0778aab3a09149876.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/wood/wood_table_disp_1k.png"
-dest_files=["res://.godot/imported/wood_table_disp_1k.png-9cc05359084663adea7264f29a1bc23f.ctex"]
+source_file="res://trenchbroom/textures/wood/wood_table_disp_1k.png"
+dest_files=["res://.godot/imported/wood_table_disp_1k.png-68025f83b0a1d4e0778aab3a09149876.ctex"]
 
 [params]
 
