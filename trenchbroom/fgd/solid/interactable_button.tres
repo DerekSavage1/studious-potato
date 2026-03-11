@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDSolidClass" format=3 uid="uid://cphbjpvqu0eq7"]
+
+[ext_resource type="Script" uid="uid://5cow84q03m6a" path="res://addons/func_godot/src/fgd/func_godot_fgd_solid_class.gd" id="1_ig521"]
+[ext_resource type="Script" uid="uid://dxhwdd648x54q" path="res://src/enviornment/Button.cs" id="2_fkbo7"]
+
+[resource]
+script = ExtResource("1_ig521")
+script_class = ExtResource("2_fkbo7")
+classname = "interactable_button"
+meta_properties = Dictionary[String, Variant]({})
+node_class = "StaticBody3D"
+metadata/_custom_type_script = "uid://5cow84q03m6a"

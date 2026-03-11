@@ -1,3 +1,0 @@
-[gd_scene format=3 uid="uid://c6wb8gged0m04"]
-
-[node name="InteractRay" type="RayCast3D" unique_id=889250412]

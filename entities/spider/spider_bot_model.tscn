@@ -1,0 +1,223 @@
+[gd_scene format=3 uid="uid://cdkd5hcskyc38"]
+
+[ext_resource type="PackedScene" uid="uid://dn85u8w3y34bg" path="res://entities/spider/spider_bot_model.gltf" id="1_hip4i"]
+[ext_resource type="Material" uid="uid://ciyhpfnpqf1wp" path="res://trenchbroom/textures/Assorted/zinc-5898-in-architextures.tres" id="2_x7lua"]
+[ext_resource type="Script" uid="uid://cxmoldvmy4jcx" path="res://entities/spider/StepRay.cs" id="3_jqapq"]
+[ext_resource type="Texture2D" uid="uid://ukkjib8ysdtk" path="res://trenchbroom/textures/prototype/Red/texture_01.png" id="3_nl5jn"]
+[ext_resource type="Script" uid="uid://bspl6402ip1rn" path="res://entities/spider/Spider.cs" id="4_nl5jn"]
+[ext_resource type="Script" uid="uid://decbalowlue4l" path="res://entities/spider/LegController.cs" id="5_auru0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aggxh"]
+albedo_texture = ExtResource("3_nl5jn")
+
+[sub_resource type="JointLimitationCone3D" id="JointLimitationCone3D_x7lua"]
+
+[node name="spider_bot_model" unique_id=621152779 instance=ExtResource("1_hip4i")]
+script = ExtResource("4_nl5jn")
+
+[node name="Body" parent="Armature/Skeleton3D/Body_2" parent_id_path=PackedInt32Array(1562163931) index="0" unique_id=1873087207]
+surface_material_override/0 = ExtResource("2_x7lua")
+
+[node name="Cylinder" parent="Armature/Skeleton3D/Body_2" parent_id_path=PackedInt32Array(1562163931) index="1" unique_id=104745501]
+surface_material_override/0 = SubResource("StandardMaterial3D_aggxh")
+
+[node name="Leg" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(981763765) index="1" unique_id=264098680]
+surface_material_override/0 = ExtResource("2_x7lua")
+
+[node name="BackRight" type="FABRIK3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(981763765) index="2" unique_id=81578897]
+transform = Transform3D(0.325, 0, 0, 0, 0.325, 0, 0, 0, 0.325, 0, 0, 0)
+angular_delta_limit = 3.141592653589793
+deterministic = true
+setting_count = 2
+settings/0/target_node = NodePath("Magnet")
+settings/1/target_node = NodePath("IKTarget")
+settings/0/root_bone_name = "leg0BackRight"
+settings/0/root_bone = 1
+settings/0/end_bone_name = "leg2BackRight"
+settings/0/end_bone = 3
+settings/0/extend_end_bone = false
+settings/0/joint_count = 3
+settings/1/root_bone_name = "leg0BackRight"
+settings/1/root_bone = 1
+settings/1/end_bone_name = "Foot IKBackRight"
+settings/1/end_bone = 5
+settings/1/extend_end_bone = false
+settings/1/joint_count = 5
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = null
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = null
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = null
+settings/1/joints/0/rotation_axis = 3
+settings/1/joints/0/limitation = SubResource("JointLimitationCone3D_x7lua")
+settings/1/joints/0/limitation/right_axis = 0
+settings/1/joints/0/limitation/rotation_offset = Quaternion(0, 0, 0, 1)
+settings/1/joints/1/rotation_axis = 3
+settings/1/joints/1/limitation = null
+settings/1/joints/2/rotation_axis = 3
+settings/1/joints/2/limitation = null
+settings/1/joints/3/rotation_axis = 3
+settings/1/joints/3/limitation = null
+settings/1/joints/4/rotation_axis = 3
+settings/1/joints/4/limitation = null
+script = ExtResource("5_auru0")
+
+[node name="Magnet" type="Marker3D" parent="Armature/Skeleton3D/BackRight" index="0" unique_id=2082262678]
+transform = Transform3D(3.0769238, -1.05710924e-08, -3.7541014e-08, -2.906209e-09, 2.8913622, -1.05237, 3.8892544e-08, 1.05237, 2.8913622, 2, 1.2, 2)
+
+[node name="IKTarget" type="Marker3D" parent="Armature/Skeleton3D/BackRight" index="1" unique_id=2098307990]
+transform = Transform3D(0.997373, 0, 0, 0, 0.997373, 0, 0, 0, 0.997373, 0, 0, 0)
+top_level = true
+
+[node name="BR" type="RayCast3D" parent="Armature/Skeleton3D/BackRight" index="2" unique_id=952541860]
+transform = Transform3D(4.9370084, -0.8705278, 0, 0.8573025, 4.862004, 0.8705278, -0.15116556, -0.8573025, 4.9370084, 2.0052679, 5.01317, 2.0052679)
+target_position = Vector3(0, -2, 0)
+script = ExtResource("3_jqapq")
+
+[node name="BackLeft" type="FABRIK3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(981763765) index="3" unique_id=593194179]
+transform = Transform3D(0.325, 0, 0, 0, 0.325, 0, 0, 0, 0.325, 0, 0, 0)
+angular_delta_limit = 3.141592653589793
+deterministic = true
+setting_count = 2
+settings/0/target_node = NodePath("Magnet")
+settings/1/target_node = NodePath("IKTarget")
+settings/0/root_bone_name = "leg0BackLeft"
+settings/0/root_bone = 16
+settings/0/end_bone_name = "leg2BackLeft"
+settings/0/end_bone = 18
+settings/0/extend_end_bone = false
+settings/0/joint_count = 3
+settings/1/root_bone_name = "leg0BackLeft"
+settings/1/root_bone = 16
+settings/1/end_bone_name = "Foot IKBackLeft"
+settings/1/end_bone = 20
+settings/1/extend_end_bone = false
+settings/1/joint_count = 5
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = null
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = null
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = null
+settings/1/joints/0/rotation_axis = 3
+settings/1/joints/0/limitation = null
+settings/1/joints/1/rotation_axis = 3
+settings/1/joints/1/limitation = null
+settings/1/joints/2/rotation_axis = 3
+settings/1/joints/2/limitation = null
+settings/1/joints/3/rotation_axis = 3
+settings/1/joints/3/limitation = null
+settings/1/joints/4/rotation_axis = 3
+settings/1/joints/4/limitation = null
+script = ExtResource("5_auru0")
+
+[node name="Magnet" type="Marker3D" parent="Armature/Skeleton3D/BackLeft" index="0" unique_id=1973933843]
+transform = Transform3D(3.0769238, -6.2401455e-08, -4.4851955e-08, -2.9062088e-09, 2.8913622, -1.05237, 3.8892548e-08, 1.0523701, 2.891362, -2, 1.5, 2)
+
+[node name="IKTarget" type="Marker3D" parent="Armature/Skeleton3D/BackLeft" index="1" unique_id=930602610]
+transform = Transform3D(0.997373, 0, 0, 0, 0.997373, 0, 0, 0, 0.997373, 0, 0, 0)
+top_level = true
+
+[node name="BL" type="RayCast3D" parent="Armature/Skeleton3D/BackLeft" index="2" unique_id=769871252]
+transform = Transform3D(4.9370084, 0.8705278, 0, -0.8573025, 4.862004, 0.8705278, 0.15116556, -0.8573025, 4.9370084, -2.0052679, 5.01317, 2.0052679)
+target_position = Vector3(0, -2, 0)
+script = ExtResource("3_jqapq")
+
+[node name="FrontLeft" type="FABRIK3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(981763765) index="4" unique_id=144732781]
+transform = Transform3D(0.325, 0, 0, 0, 0.325, 0, 0, 0, 0.325, -0.29557776, 0.5137126, -0.7988213)
+angular_delta_limit = 3.141592653589793
+deterministic = true
+setting_count = 2
+settings/0/target_node = NodePath("Magnet")
+settings/1/target_node = NodePath("IKTarget")
+settings/0/root_bone_name = "leg0FrontLeft"
+settings/0/root_bone = 11
+settings/0/end_bone_name = "leg2FrontLeft"
+settings/0/end_bone = 13
+settings/0/extend_end_bone = false
+settings/0/joint_count = 3
+settings/1/root_bone_name = "leg0FrontLeft"
+settings/1/root_bone = 11
+settings/1/end_bone_name = "Foot IKFrontLeft"
+settings/1/end_bone = 15
+settings/1/extend_end_bone = false
+settings/1/joint_count = 5
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = null
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = null
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = null
+settings/1/joints/0/rotation_axis = 3
+settings/1/joints/0/limitation = null
+settings/1/joints/1/rotation_axis = 3
+settings/1/joints/1/limitation = null
+settings/1/joints/2/rotation_axis = 3
+settings/1/joints/2/limitation = null
+settings/1/joints/3/rotation_axis = 3
+settings/1/joints/3/limitation = null
+settings/1/joints/4/rotation_axis = 3
+settings/1/joints/4/limitation = null
+script = ExtResource("5_auru0")
+
+[node name="Magnet" type="Marker3D" parent="Armature/Skeleton3D/FrontLeft" index="0" unique_id=706035176]
+transform = Transform3D(3.0769238, -6.2401455e-08, -4.4851955e-08, -2.9062088e-09, 2.8913622, -1.05237, 3.8892548e-08, 1.0523701, 2.891362, -1.1674588, 0.0078549385, 0.33017588)
+
+[node name="IKTarget" type="Marker3D" parent="Armature/Skeleton3D/FrontLeft" index="1" unique_id=2014760851]
+transform = Transform3D(0.997373, 0, 0, 0, 0.997373, 0, 0, 0, 0.997373, 0, 0, 0)
+top_level = true
+
+[node name="FL" type="RayCast3D" parent="Armature/Skeleton3D/FrontLeft" index="2" unique_id=428043785]
+transform = Transform3D(4.9370084, 0.8705278, 0, -0.8573025, 4.862004, -0.8705278, -0.15116556, 0.8573025, 4.9370084, -1.0957978, 3.4325156, 0.45264363)
+target_position = Vector3(0, -5, 0)
+script = ExtResource("3_jqapq")
+
+[node name="FrontRight" type="FABRIK3D" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(981763765) index="5" unique_id=380051230]
+transform = Transform3D(0.325, 0, 0, 0, 0.325, 0, 0, 0, 0.325, 1.3278472, 0, 0)
+angular_delta_limit = 3.141592653589793
+deterministic = true
+setting_count = 2
+settings/0/target_node = NodePath("Magnet")
+settings/1/target_node = NodePath("IKTarget")
+settings/0/root_bone_name = "leg0FrontRight"
+settings/0/root_bone = 6
+settings/0/end_bone_name = "leg2FrontRight"
+settings/0/end_bone = 8
+settings/0/extend_end_bone = false
+settings/0/joint_count = 3
+settings/1/root_bone_name = "leg0FrontRight"
+settings/1/root_bone = 6
+settings/1/end_bone_name = "Foot IKFrontRight"
+settings/1/end_bone = 10
+settings/1/extend_end_bone = false
+settings/1/joint_count = 5
+settings/0/joints/0/rotation_axis = 3
+settings/0/joints/0/limitation = null
+settings/0/joints/1/rotation_axis = 3
+settings/0/joints/1/limitation = null
+settings/0/joints/2/rotation_axis = 3
+settings/0/joints/2/limitation = null
+settings/1/joints/0/rotation_axis = 3
+settings/1/joints/0/limitation = null
+settings/1/joints/1/rotation_axis = 3
+settings/1/joints/1/limitation = null
+settings/1/joints/2/rotation_axis = 3
+settings/1/joints/2/limitation = null
+settings/1/joints/3/rotation_axis = 3
+settings/1/joints/3/limitation = null
+settings/1/joints/4/rotation_axis = 3
+settings/1/joints/4/limitation = null
+script = ExtResource("5_auru0")
+
+[node name="Magnet" type="Marker3D" parent="Armature/Skeleton3D/FrontRight" index="0" unique_id=1746695845]
+transform = Transform3D(3.0769238, -6.2401455e-08, -4.4851955e-08, -2.9062088e-09, 2.8913622, -1.05237, 3.8892548e-08, 1.0523701, 2.891362, -2, 1.5, -2)
+
+[node name="IKTarget" type="Marker3D" parent="Armature/Skeleton3D/FrontRight" index="1" unique_id=1467375414]
+transform = Transform3D(0.997373, 0, 0, 0, 0.997373, 0, 0, 0, 0.997373, 0, 0, 0)
+top_level = true
+
+[node name="FR" type="RayCast3D" parent="Armature/Skeleton3D/FrontRight" index="2" unique_id=1537474892]
+transform = Transform3D(4.9370084, -0.8705278, 0, 0.8573025, 4.862004, -0.8705278, 0.15116556, 0.8573025, 4.9370084, -2.080416, 5.01317, -2.0052679)
+target_position = Vector3(0, -3, 0)
+script = ExtResource("3_jqapq")

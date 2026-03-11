@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ciyhpfnpqf1wp"]
+
+[ext_resource type="Texture2D" uid="uid://b0tlg5geeixme" path="res://trenchbroom/textures/Assorted/zinc-5898-in-architextures.jpg" id="1_curln"]
+
+[resource]
+albedo_texture = ExtResource("1_curln")
+metallic_specular = 0.0
+texture_filter = 2
