@@ -7,7 +7,7 @@ valid=false
 
 [deps]
 
-source_file="res://textures/wood/stained_pine_rough_1k.exr"
+source_file="res://trenchbroom/textures/wood/stained_pine_rough_1k.exr"
 
 [params]
 

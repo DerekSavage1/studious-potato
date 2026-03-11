@@ -49,4 +49,31 @@
 ( 928 1024 384 ) ( -896 1024 384 ) ( -896 1024 -128 ) prototype/Orange/texture_09 17.964912 0 180 0.5 0.5
 ( 928 992 384 ) ( 928 1024 384 ) ( 928 1024 -128 ) prototype/Orange/texture_09 -96 0 0 0.5 0.5
 }
+// brush 5
+{
+( 32 160 320 ) ( 32 -384 320 ) ( 32 -384 0 ) prototype/Orange/texture_09 0 0 0 1 1
+( 32 -384 320 ) ( 224 -384 320 ) ( 224 -384 0 ) prototype/Orange/texture_09 0 0 0 1 1
+( 224 -384 0 ) ( 224 160 0 ) ( 32 160 0 ) prototype/Orange/texture_09 0 0 0 1 1
+( 32 160 320 ) ( 224 160 320 ) ( 224 -384 320 ) prototype/Orange/texture_09 0 0 0 1 1
+( 224 160 0 ) ( 224 160 320 ) ( 32 160 320 ) prototype/Orange/texture_09 0 0 0 1 1
+( 224 -384 320 ) ( 224 160 320 ) ( 224 160 0 ) prototype/Orange/texture_09 0 0 0 1 1
+}
+// brush 6
+{
+( -288 992 336 ) ( -288 448 336 ) ( -288 448 16 ) prototype/Orange/texture_09 -832 16 0 1 1
+( -288 448 336 ) ( -96 448 336 ) ( -96 448 16 ) prototype/Orange/texture_09 320 16 0 1 1
+( -96 448 16 ) ( -96 992 16 ) ( -288 992 16 ) prototype/Orange/texture_09 320 832 0 1 1
+( -288 992 336 ) ( -96 992 336 ) ( -96 448 336 ) prototype/Orange/texture_09 320 832 0 1 1
+( -96 992 16 ) ( -96 992 336 ) ( -288 992 336 ) prototype/Orange/texture_09 320 16 0 1 1
+( -96 448 336 ) ( -96 992 336 ) ( -96 992 16 ) prototype/Orange/texture_09 -832 16 0 1 1
+}
+// brush 7
+{
+( -672 -576 336 ) ( -672 -1120 336 ) ( -672 -1120 16 ) prototype/Orange/texture_09 736 16 0 1 1
+( -672 -1120 336 ) ( -480 -1120 336 ) ( -480 -1120 16 ) prototype/Orange/texture_09 704 16 0 1 1
+( -480 -1120 16 ) ( -480 -576 16 ) ( -672 -576 16 ) prototype/Orange/texture_09 704 -736 0 1 1
+( -672 -576 336 ) ( -480 -576 336 ) ( -480 -1120 336 ) prototype/Orange/texture_09 704 -736 0 1 1
+( -480 -576 16 ) ( -480 -576 336 ) ( -672 -576 336 ) prototype/Orange/texture_09 704 16 0 1 1
+( -480 -1120 336 ) ( -480 -576 336 ) ( -480 -576 16 ) prototype/Orange/texture_09 736 16 0 1 1
+}
 }
