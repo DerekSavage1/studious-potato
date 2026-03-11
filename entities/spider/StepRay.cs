@@ -5,7 +5,6 @@ using System.Runtime.CompilerServices;
 public partial class StepRay : RayCast3D
 {
     private Vector3 stepTargetPosition;
-    private bool error = false;
     public override void _PhysicsProcess(double delta)
     {
         if(IsColliding())

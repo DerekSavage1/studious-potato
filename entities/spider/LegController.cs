@@ -1,10 +1,16 @@
 using Godot;
 using System;
+using System.ComponentModel;
 using System.Linq.Expressions;
 
 
 public partial class LegController : Fabrik3D
 {
+
+    //visual opposite stepping
+    [Export] LegController adjacentController;
+    [Export] LegController oppositeController;
+
 
     [Export] float stepOffset{get; set;} = 3f; 
     private Vector3 desiredPosition;
@@ -17,6 +23,7 @@ public partial class LegController : Fabrik3D
     {
         int foundCount = 0;
 
+        
         foreach (Node child in GetChildren())
         {
             if (child is Marker3D node && node.TopLevel)
@@ -43,35 +50,50 @@ public partial class LegController : Fabrik3D
             GD.PrintErr("Spider Leg Has No StepRay Child");
             return;
         }
+
+        footPosition = IK_marker.GlobalPosition;
     }
 
     public override void _Process(double delta)
     {
         if(isStepping)
             return;
-
+    
         desiredPosition = stepRay.getStepTargetPosition();
         
 
         if(footPosition.DistanceTo(desiredPosition) > stepOffset)
         {
-            Step();
-        } else
-        {
-            IK_marker.Position = footPosition;
+            if(!adjacentController.isStepping)
+            {
+                Step();
+                oppositeController.Step();    
+            }
+            
         }
     }    
 
     public void Step()
     {
         isStepping = true;                    
-        var halfway = (footPosition + desiredPosition) / 2;
+        var halfway = (IK_marker.GlobalPosition + desiredPosition) / 2;
 
         Tween tween = GetTree().CreateTween(); 
-        tween.TweenProperty(IK_marker, "global_position", halfway + ((Node3D) Owner).Basis.Y, .1);
+        Vector3 lift = Vector3.Up * 0.5f;
+        tween.TweenProperty(IK_marker, "global_position", halfway + lift, .1);
         tween.TweenProperty(IK_marker, "global_position", desiredPosition, .1);
         tween.TweenCallback(Callable.From(() => isStepping = false));
 
         footPosition = desiredPosition;
+    }
+
+    public Vector3 getFootPosition()
+    {
+        return footPosition;
+    }
+
+    public Vector3 getDesiredPosition()
+    {
+        return desiredPosition;
     }
 }

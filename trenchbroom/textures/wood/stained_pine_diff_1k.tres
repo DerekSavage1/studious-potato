@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c0uukynwqroku"]
+
+[ext_resource type="Texture2D" uid="uid://2pfo6my72gvt" path="res://textures/wood/stained_pine_diff_1k.jpg" id="1_a6771"]
+
+[resource]
+albedo_texture = ExtResource("1_a6771")
+metallic_specular = 0.0
+texture_filter = 2

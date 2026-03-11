@@ -8,6 +8,7 @@
 
 [resource]
 script = ExtResource("3_6qld0")
+fgd_name = "FPSDevKit"
 base_fgd_files = Array[Resource]([ExtResource("1_vkksf")])
 entity_definitions = Array[Resource]([ExtResource("3_4bnda"), ExtResource("3_p0awt"), ExtResource("4_6qld0")])
 metadata/_custom_type_script = "uid://drlmgulwbjwqu"
