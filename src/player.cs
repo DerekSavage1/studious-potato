@@ -1,19 +1,42 @@
 using Godot;
 using System;
+using System.ComponentModel;
 
 /*
    C#: 	Classes, export variables and methods use PascalCase, 
 		private fields use _camelCase,
 		local variables and parameters use camelCase (See C# style guide).
 */
-public partial class player : CharacterBody3D
+public partial class Player : CharacterBody3D
 {
-	public const float Speed = 5.0f;
-	public const float JumpVelocity = 4.5f;
+
+	[Export] public NodePath hpLabelPath;
+	private Label hpLabel;
+	private const float Speed = 5.0f;
+	private const float JumpVelocity = 4.5f;
+
+	private float hp = 10f;
+	private const float PUSHBACK = 8.0f;
+	private Vector3 velocity;
+
+	
+
+    public override void _Ready()
+    {
+
+
+		hpLabel = GetNode<Label>(hpLabelPath);
+
+		GD.Print(hpLabel);
+    }
+
+
 
 	public override void _PhysicsProcess(double delta)
 	{
-		Vector3 velocity = Velocity;
+
+		hpLabel.Text = "HP: " + hp;
+		velocity = Velocity;
 
 		// Add the gravity.
 		if (!IsOnFloor())
@@ -44,5 +67,11 @@ public partial class player : CharacterBody3D
 
 		Velocity = velocity;
 		MoveAndSlide();
+	}
+
+	public void Hit(float damage, Vector3 direction)
+	{
+		hp -= damage;
+		velocity += direction * PUSHBACK;
 	}
 }

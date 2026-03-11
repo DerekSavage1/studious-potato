@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dnvfenv773xup"]
 
-[ext_resource type="Script" uid="uid://c3i7mbnl1ps3a" path="res://src/player.cs" id="1_nrofp"]
+[ext_resource type="Script" uid="uid://c3i7mbnl1ps3a" path="res://src/Player.cs" id="1_nrofp"]
 [ext_resource type="Script" uid="uid://britpol26rr6q" path="res://src/FpCam.cs" id="2_nrofp"]
 [ext_resource type="Shader" uid="uid://c0qd0vnsh6hkw" path="res://player/overlay.gdshader" id="3_6g8ua"]
 [ext_resource type="Script" uid="uid://cttkn1w2e5tw6" path="res://src/PlayerRayCast.cs" id="4_wxf5c"]
@@ -22,9 +22,9 @@ flip_faces = true
 size = Vector2(2, 2)
 
 [node name="Player3D" type="CharacterBody3D" unique_id=579425607]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38914394, 0.832649, 0.62789774)
 collision_layer = 2
 script = ExtResource("1_nrofp")
+hpLabelPath = NodePath("TextHp")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1527915796]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.004399, 0)
@@ -50,3 +50,11 @@ mesh = SubResource("QuadMesh_wxf5c")
 target_position = Vector3(0, 0, -2)
 debug_shape_thickness = 1
 script = ExtResource("4_wxf5c")
+
+[node name="TextHp" type="Label" parent="." unique_id=555734064]
+offset_left = 19.0
+offset_top = 548.0
+offset_right = 124.0
+offset_bottom = 636.0
+theme_override_font_sizes/font_size = 64
+text = "HP:"

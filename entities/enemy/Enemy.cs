@@ -10,7 +10,7 @@ public partial class Enemy : CharacterBody3D
     private const float DAMAGE = 2.0f;
     private Vector3 velocity;
 
-    Node3D player;
+    Player player;
     [Export] public NodePath playerPath;
     [Export] public AnimationTree animTree;
     [Export] public CollisionShape3D collisionShape;
@@ -34,11 +34,25 @@ public partial class Enemy : CharacterBody3D
             GD.PrintErr("Enemy says: No NavigationAgent3D Child! I need one!");
         }
         
-        player = GetNode<Node3D>(playerPath);
+        player = GetNode<Player>(playerPath);
         velocity = Vector3.Zero;
 
         animTree = GetNode<AnimationTree>("AnimationTree");
          
+    }
+
+    public void HitPlayer()
+    {  
+        
+        if(!targetInRange())
+        {
+            GetNode<AudioStreamPlayer3D>("HitSwing").Play();
+            return;
+        }
+        var dir = GlobalPosition.DirectionTo(player.GlobalPosition);
+        player.Hit(DAMAGE, dir);
+        
+        GetNode<AudioStreamPlayer3D>("HitImpact").Play();
     }
 
     public override void _PhysicsProcess(double delta)
@@ -60,6 +74,7 @@ public partial class Enemy : CharacterBody3D
                 animTree.Set("parameters/conditions/Run", true);
             break;
             case "hit":
+                
             break;
             case "death":
             break;
