@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://ctcp1s85cramy"
+path="res://.godot/imported/door.map-387fdf533a8266e839e649aa329738d9.tres"
+
+[deps]
+
+source_file="res://assets/trenchbroom/models/door/door.map"
+dest_files=["res://.godot/imported/door.map-387fdf533a8266e839e649aa329738d9.tres"]
+
+[params]
+

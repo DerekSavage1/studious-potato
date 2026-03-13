@@ -1,3 +1,6 @@
+# files that are too large
+*.glb
+
 # Vim swap files
 *.swp
 *.swo

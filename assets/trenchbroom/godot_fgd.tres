@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDFile" format=3 uid="uid://brtymcbf2dv22"]
+
+[ext_resource type="Resource" uid="uid://crgpdahjaj" path="res://addons/func_godot/fgd/func_godot_fgd.tres" id="1_vkksf"]
+[ext_resource type="Resource" uid="uid://cphbjpvqu0eq7" path="res://assets/trenchbroom/fgd/solid/interactable_button.tres" id="3_4bnda"]
+[ext_resource type="Script" uid="uid://drlmgulwbjwqu" path="res://addons/func_godot/src/fgd/func_godot_fgd_file.gd" id="3_6qld0"]
+[ext_resource type="Resource" uid="uid://cu7arphwskec" path="res://assets/trenchbroom/fgd/solid/reactive_light.tres" id="3_p0awt"]
+[ext_resource type="Resource" uid="uid://bi0fn528giuuv" path="res://assets/trenchbroom/fgd/point/func_light.tres" id="4_6qld0"]
+
+[resource]
+script = ExtResource("3_6qld0")
+fgd_name = "FPSDevKit"
+base_fgd_files = Array[Resource]([ExtResource("1_vkksf")])
+entity_definitions = Array[Resource]([ExtResource("3_4bnda"), ExtResource("3_p0awt"), ExtResource("4_6qld0")])
+metadata/_custom_type_script = "uid://drlmgulwbjwqu"

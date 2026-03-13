@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://devqjutinh6ls"
+path="res://.godot/imported/Bus.map-5acad2bb173b670f32cf1b916786221f.tres"
+
+[deps]
+
+source_file="res://assets/trenchbroom/maps/Bus.map"
+dest_files=["res://.godot/imported/Bus.map-5acad2bb173b670f32cf1b916786221f.tres"]
+
+[params]
+

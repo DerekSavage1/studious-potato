@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://c4sgwfd52e5tq"
+path="res://.godot/imported/ElevatorDoor.map-30adedc1eef23085bcbeb9b0138111c7.tres"
+
+[deps]
+
+source_file="res://assets/trenchbroom/models/elevatordoor/ElevatorDoor.map"
+dest_files=["res://.godot/imported/ElevatorDoor.map-30adedc1eef23085bcbeb9b0138111c7.tres"]
+
+[params]
+

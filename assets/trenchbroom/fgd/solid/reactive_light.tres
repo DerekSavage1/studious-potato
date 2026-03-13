@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="FuncGodotFGDSolidClass" format=3 uid="uid://cu7arphwskec"]
+
+[ext_resource type="Script" uid="uid://5cow84q03m6a" path="res://addons/func_godot/src/fgd/func_godot_fgd_solid_class.gd" id="1_rcgny"]
+[ext_resource type="Script" uid="uid://50fajj1l24a3" path="res://scripts/levels/dorm/Light.cs" id="2_40rh6"]
+
+[resource]
+script = ExtResource("1_rcgny")
+script_class = ExtResource("2_40rh6")
+classname = "reactive_light"
+node_class = "Node3D"
+metadata/_custom_type_script = "uid://5cow84q03m6a"
