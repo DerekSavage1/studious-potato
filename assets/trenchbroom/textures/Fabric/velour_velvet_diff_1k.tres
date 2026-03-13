@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://q3kryj8uq3jk"]
+
+[ext_resource type="Texture2D" uid="uid://45rq0ehuq6hi" path="res://assets/trenchbroom/textures/Fabric/velour_velvet_diff_1k.jpg" id="1_apl52"]
+
+[resource]
+albedo_texture = ExtResource("1_apl52")
+metallic_specular = 0.0
+texture_filter = 2

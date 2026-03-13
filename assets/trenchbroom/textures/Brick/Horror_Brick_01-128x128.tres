@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://hsr7i2wg6rto"]
+
+[ext_resource type="Texture2D" uid="uid://dnbcc2n0i0bvl" path="res://assets/trenchbroom/textures/Brick/Horror_Brick_01-128x128.png" id="1_8le1y"]
+
+[resource]
+albedo_texture = ExtResource("1_8le1y")
+metallic_specular = 0.0
+texture_filter = 2

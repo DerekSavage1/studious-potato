@@ -1,0 +1,14 @@
+[remap]
+
+importer="func_godot.map"
+type="Resource"
+uid="uid://cg232xxs47pia"
+path="res://.godot/imported/bar.map-24c7d9a1667c14ace0e3853b373c1660.tres"
+
+[deps]
+
+source_file="res://assets/trenchbroom/maps/bar.map"
+dest_files=["res://.godot/imported/bar.map-24c7d9a1667c14ace0e3853b373c1660.tres"]
+
+[params]
+

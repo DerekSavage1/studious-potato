@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dhnjxdxoh7hlt"]
+
+[ext_resource type="Texture2D" uid="uid://bst5vovj18klx" path="res://assets/trenchbroom/textures/Grass/tileable-s7002876-grey.png" id="1_vfdeu"]
+
+[resource]
+albedo_texture = ExtResource("1_vfdeu")
+metallic_specular = 0.0
+emission_enabled = true
+texture_filter = 2

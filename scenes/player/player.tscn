@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dnvfenv773xup"]
+
+[ext_resource type="Script" uid="uid://c3i7mbnl1ps3a" path="res://scripts/player/Player.cs" id="1_75vfm"]
+[ext_resource type="Script" uid="uid://britpol26rr6q" path="res://scripts/player/FpCam.cs" id="2_0owmy"]
+[ext_resource type="Shader" uid="uid://c0qd0vnsh6hkw" path="res://scenes/player/pixelated_shader.gdshader" id="3_qek5x"]
+[ext_resource type="Script" uid="uid://cttkn1w2e5tw6" path="res://scripts/player/PlayerRayCast.cs" id="4_5gtgg"]
+[ext_resource type="Script" uid="uid://ce7jvv2lkgfq4" path="res://scripts/weapons/WeaponController.cs" id="5_h17s1"]
+[ext_resource type="Resource" uid="uid://dt7mecyr7ah4e" path="res://scripts/weapons/resources/AxeData.tres" id="6_je7p5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qif3h"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qif3h"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1obgi"]
+render_priority = 0
+shader = ExtResource("3_qek5x")
+shader_parameter/pixel_size = 7.0
+shader_parameter/levels = 70.0
+shader_parameter/gamma = Vector2(0.2, 5)
+
+[sub_resource type="QuadMesh" id="QuadMesh_wxf5c"]
+material = SubResource("ShaderMaterial_1obgi")
+flip_faces = true
+size = Vector2(2, 2)
+
+[node name="Player3D" type="CharacterBody3D" unique_id=579425607]
+collision_layer = 2
+script = ExtResource("1_75vfm")
+hpLabelPath = NodePath("TextHp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1527915796]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.004399, 0)
+shape = SubResource("CapsuleShape3D_qif3h")
+debug_color = Color(0.991777, 0, 0.26719525, 0.41960785)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1428891489]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_qif3h")
+
+[node name="head" type="Node3D" parent="." unique_id=455858767]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7486511, 0)
+script = ExtResource("2_0owmy")
+
+[node name="Camera3D" type="Camera3D" parent="head" unique_id=2119016959]
+fov = 90.0
+
+[node name="Shader" type="MeshInstance3D" parent="head/Camera3D" unique_id=1047298561]
+extra_cull_margin = 16384.0
+mesh = SubResource("QuadMesh_wxf5c")
+
+[node name="PlayerRayCast" type="RayCast3D" parent="head" unique_id=1650173282]
+target_position = Vector3(0, 0, -2)
+debug_shape_thickness = 1
+script = ExtResource("4_5gtgg")
+
+[node name="TextHp" type="Label" parent="." unique_id=555734064]
+offset_left = 19.0
+offset_top = 548.0
+offset_right = 124.0
+offset_bottom = 636.0
+theme_override_font_sizes/font_size = 64
+text = "HP:"
+
+[node name="Node3D" type="Node3D" parent="." unique_id=259870908 node_paths=PackedStringArray("WeaponModelParent")]
+script = ExtResource("5_h17s1")
+CurrentWeapon = ExtResource("6_je7p5")
+WeaponModelParent = NodePath("../head/Camera3D")

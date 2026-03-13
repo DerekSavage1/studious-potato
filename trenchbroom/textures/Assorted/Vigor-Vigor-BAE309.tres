@@ -1,8 +1,0 @@
-[gd_resource type="StandardMaterial3D" format=3 uid="uid://dbv8nbp4qbp06"]
-
-[ext_resource type="Texture2D" uid="uid://cbwxkp76whogh" path="res://trenchbroom/textures/Assorted/Vigor-Vigor-BAE309.jpg" id="1_kpuum"]
-
-[resource]
-albedo_texture = ExtResource("1_kpuum")
-metallic_specular = 0.0
-texture_filter = 2

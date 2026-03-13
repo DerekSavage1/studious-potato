@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="WeaponData" format=3 uid="uid://dt7mecyr7ah4e"]
+
+[ext_resource type="PackedScene" uid="uid://o1w5crulpdrs" path="res://scenes/weapons/Axe/axe.tscn" id="1_r5p15"]
+[ext_resource type="Script" uid="uid://b5f47p05acj4t" path="res://scripts/weapons/WeaponData.cs" id="2_nvabv"]
+
+[resource]
+script = ExtResource("2_nvabv")
+WeaponName = "axe"
+Damage = 1.0
+WeaponModel = ExtResource("1_r5p15")
+WeaponPosition = Vector3(-0.14, -0.36, -0.35)
+RotX = 0.8115781021773633
+RotY = 1.0821041362364843
+RotZ = 5.846852994181004
+metadata/_custom_type_script = "uid://b5f47p05acj4t"

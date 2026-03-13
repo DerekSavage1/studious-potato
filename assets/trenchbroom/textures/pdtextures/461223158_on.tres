@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dw3p2go1yid66"]
+
+[ext_resource type="Texture2D" uid="uid://bu7spqqk4qnvq" path="res://assets/trenchbroom/textures/pdtextures/461223158.jpg" id="1_a3jcf"]
+
+[resource]
+albedo_texture = ExtResource("1_a3jcf")
+metallic_specular = 0.0
+emission_enabled = true
+emission = Color(0.87058824, 0.79607844, 0.60784316, 1)
+emission_energy_multiplier = 0.57
+texture_filter = 2
