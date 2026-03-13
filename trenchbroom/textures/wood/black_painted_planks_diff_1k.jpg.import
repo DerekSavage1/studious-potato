@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvhp0g3xwi40d"
-path.s3tc="res://.godot/imported/Horror_Wall_11-128x128.png-a8b81f39be617e8f0db6d40061b13f83.s3tc.ctex"
+uid="uid://00dw1xp0ynd"
+path.s3tc="res://.godot/imported/black_painted_planks_diff_1k.jpg-1a2377bb8f865de3bc31408d82d975bb.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://trenchbroom/textures/Wall/Horror_Wall_11-128x128.png"
-dest_files=["res://.godot/imported/Horror_Wall_11-128x128.png-a8b81f39be617e8f0db6d40061b13f83.s3tc.ctex"]
+source_file="res://trenchbroom/textures/wood/black_painted_planks_diff_1k.jpg"
+dest_files=["res://.godot/imported/black_painted_planks_diff_1k.jpg-1a2377bb8f865de3bc31408d82d975bb.s3tc.ctex"]
 
 [params]
 

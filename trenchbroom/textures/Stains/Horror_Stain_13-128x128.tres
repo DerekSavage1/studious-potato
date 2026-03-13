@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cvi4mmnr8f44s"]
+
+[ext_resource type="Texture2D" uid="uid://b5aw7akdgln04" path="res://trenchbroom/textures/Stains/Horror_Stain_13-128x128.png" id="1_bpsig"]
+
+[resource]
+albedo_texture = ExtResource("1_bpsig")
+metallic_specular = 0.0
+texture_filter = 2

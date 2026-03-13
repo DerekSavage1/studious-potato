@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://n48rc4hkb1tw"]
+
+[ext_resource type="Texture2D" uid="uid://c4axc1dvnjlev" path="res://trenchbroom/textures/DerekSavage/DerekSavage.jpg" id="1_ilwon"]
+
+[resource]
+albedo_texture = ExtResource("1_ilwon")
+metallic_specular = 0.0
+texture_filter = 2

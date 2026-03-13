@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ivp6snbb4wsl"]
+
+[ext_resource type="Texture2D" uid="uid://c6ut2jun3wkrg" path="res://trenchbroom/textures/wood/wood_table_001_diff_1k.jpg" id="1_byqms"]
+
+[resource]
+albedo_texture = ExtResource("1_byqms")
+metallic_specular = 0.0
+texture_filter = 2

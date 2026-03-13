@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cvmhmcimjbdqc"]
+
+[ext_resource type="Texture2D" uid="uid://00dw1xp0ynd" path="res://trenchbroom/textures/wood/black_painted_planks_diff_1k.jpg" id="1_qprtp"]
+
+[resource]
+albedo_texture = ExtResource("1_qprtp")
+metallic_specular = 0.0
+texture_filter = 2

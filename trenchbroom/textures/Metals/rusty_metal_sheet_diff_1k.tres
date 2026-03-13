@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bo7iuh71aw18v"]
+
+[ext_resource type="Texture2D" uid="uid://cuc2gqn87fy5v" path="res://trenchbroom/textures/Metals/rusty_metal_sheet_diff_1k.jpg" id="1_1mm8q"]
+
+[resource]
+albedo_texture = ExtResource("1_1mm8q")
+metallic_specular = 0.0
+texture_filter = 2
